@@ -1,0 +1,27 @@
+{% extends "home/base.html" %}
+
+{% block title %}
+Home | {{ block.super }}
+{% endblock %}
+<{% block content %}
+<div style="font-family: Arial">
+
+<h1 style="color: #003366" align="center"> Automated Question Generation </h1>
+
+    <ul class="nav nav-pills" >
+      <li role="presentation" class="active"><a href='{% url 'home:GQ' %}'>Generate Questions from a File</a></li>
+      <li role="presentation" class="active"><a href="h#">Generate Questions Online</a></li>
+    </ul>
+
+    <h3 style="color: #205067" align="left">List of Documents with generated questions: </h3>
+
+    {% for obj in queryset %}
+    <div class="list-group">
+      <a href='{{ obj.get_absolute_url }}' class="list-group-item">
+        {{ obj.title }}
+      </a>
+      </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

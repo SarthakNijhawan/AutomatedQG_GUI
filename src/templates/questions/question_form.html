@@ -1,0 +1,27 @@
+{% extends "question/base.html" %}
+
+{% block title %}
+New Question | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3">
+
+        <div style="font-family: Arial">
+
+        <h1 style="color: lightslategray; ">
+            Form a New Question
+        </h1>
+
+        <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="Create Question">
+        </form>
+
+        </div>
+    </div>
+    <br>
+    <div>
+    <a href="question_list.html">Back to the List</a>
+    </div>
+{% endblock content%}

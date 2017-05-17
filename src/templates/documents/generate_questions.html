@@ -1,0 +1,27 @@
+{% extends "home/base.html" %}
+
+{% block title %}
+Generate Question | {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="col-sm-6 col-sm-offset-3">
+
+        <div style="font-family: Arial">
+        <h1 style="color: lightslategray; ">
+        Form for Generating Questions
+        </h1>
+
+        <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="Generate Questions">
+        </form>
+
+        </div>
+    </div>
+    <br>
+    <div>
+    <a href='{% url "home:home_page" %}'>Home</a>
+    </div>
+
+{% endblock %}

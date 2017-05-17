@@ -1,0 +1,30 @@
+{% extends "home/base.html" %}
+
+{% block title %}
+ {{ instance.title }} | {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div>
+    <h2 align="center"> {{ instance.title }} </h2>
+</div>
+
+    <div class="list-group">
+
+
+        <button class="btn btn-primary" type="button">
+        <a href="{% url "question:create" %}" style="color: white"> Create a new Question </a> {#  <span class="badge">4</span>#}
+        </button>
+        <br><br>
+
+        <h3 style="font-family: Arial; color: #003366">Generated Questions List</h3><br>
+
+        {% for obj in instance.questions_obj_list %}
+                <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.final_question }} <small>Score: {{ obj.score }}</small></a>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+
