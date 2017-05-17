@@ -1,0 +1,430 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"que",
+				"queryset_list"
+			],
+			[
+				"query",
+				"queryset_list"
+			],
+			[
+				"POst",
+				"PostManager"
+			],
+			[
+				"Post",
+				"PostManager"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"is_",
+				"is_staff"
+			],
+			[
+				"Htt",
+				"Http404"
+			],
+			[
+				"slug",
+				"slugify"
+			],
+			[
+				"pre",
+				"pre_save_post_receiver"
+			],
+			[
+				"page",
+				"page_request_var"
+			],
+			[
+				"quer",
+				"queryset"
+			],
+			[
+				"qu",
+				"queryset"
+			],
+			[
+				"q",
+				"queryset"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"fot",
+				"font-family"
+			],
+			[
+				"col",
+				"col-sm-6"
+			],
+			[
+				"url",
+				"urls"
+			],
+			[
+				"message",
+				"messages"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"HttpRe",
+				"HttpResponseRedirect"
+			],
+			[
+				"is",
+				"is_valid"
+			],
+			[
+				"fo",
+				"form\tTag"
+			],
+			[
+				"f",
+				"from"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"queryset",
+				"queryset_list"
+			],
+			[
+				"PO",
+				"PostModelAdmin"
+			],
+			[
+				"i",
+				"import"
+			],
+			[
+				"temp_",
+				"temp_mux_sig"
+			],
+			[
+				"temp",
+				"temp_enable_sig"
+			],
+			[
+				"B_",
+				"B_mux_sig"
+			],
+			[
+				"A_",
+				"A_mux_sig"
+			],
+			[
+				"reset_",
+				"reset_div_sig"
+			],
+			[
+				"div",
+				"div_start_sig"
+			],
+			[
+				"pred",
+				"pred_sig"
+			],
+			[
+				"gcd2",
+				"gcd2_out"
+			],
+			[
+				"tep",
+				"temp_enable_sig"
+			],
+			[
+				"B",
+				"B_enable_sig"
+			],
+			[
+				"rese",
+				"reset_div_sig"
+			],
+			[
+				"res",
+				"reset_div"
+			],
+			[
+				"div_",
+				"div_start_sig"
+			],
+			[
+				"r",
+				"reset_div"
+			],
+			[
+				"g",
+				"gcd2_start"
+			],
+			[
+				"data",
+				"datapath"
+			],
+			[
+				"contr",
+				"controlpath"
+			],
+			[
+				"std",
+				"std_logic_vector"
+			],
+			[
+				"std_logic",
+				"std_logic_vector"
+			],
+			[
+				"reset",
+				"reset_div"
+			],
+			[
+				"mux2",
+				"mux2temp"
+			],
+			[
+				"remain",
+				"remainderout"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 359.0,
+		"last_filter": "Package Control:",
+		"selected_items":
+		[
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"clear",
+			"quit",
+			"q",
+			"exit",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/models.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/post_form.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/django_proj/settings.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/post_list.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/views.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/urls.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/forms.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/post_detail.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/templatetags/urlify.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/templatetags/__init__.py",
+		"/Users/sarthaknijhawan/Desktop/media/random.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/django_proj/urls.py",
+		"/Users/sarthaknijhawan/Desktop/prac.html",
+		"/Users/sarthaknijhawan/Desktop/media/arbit.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/base.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/static/css/base.css",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/messages_display.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/crud.md",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/templates/index.html",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/posts/admin.py",
+		"/Users/sarthaknijhawan/Desktop/my_project/src/manage.py",
+		"/Users/sarthaknijhawan/Desktop/venv_django/django_first_project/manage.py",
+		"/Users/sarthaknijhawan/Downloads/153050031_15305R007_15305R004_150070037/ip_addr_svm.py",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/gcd2.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/testbench.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/system(1).vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/simulation/modelsim/TRACEFILE.txt",
+		"/Users/sarthaknijhawan/Desktop/Lab8/scan_chain/Toplevel.vhdl",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/simulation/modelsim/in.txt",
+		"/Users/sarthaknijhawan/Desktop/Lab8/scan_chain/Toplevel.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/scan_chain/gcd2.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/simulation/modelsim/OUTPUTS.txt",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/output_files/gcd.flow.rpt",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/gcd.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/gcd16.vhd",
+		"/Users/sarthaknijhawan/Desktop/Lab8/gcd_new/System.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/gcd16.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/testbench.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/System.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/gcd.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/GCDLIB/divider.vhdl",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/GCDCOMPONENTS.vhdl",
+		"/Users/sarthaknijhawan/Desktop/Lab8/GCD/GCD.vhd",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/EE224.vhdl",
+		"/Users/sarthaknijhawan/Desktop/SEM_4/digi lab/gcd/gcd2.vhd",
+		"/Users/sarthaknijhawan/Desktop/gac.vhd",
+		"/Users/sarthaknijhawan/Desktop/m.cpp",
+		"/Users/sarthaknijhawan/Desktop/m.vhdl"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"id",
+			"slug",
+			"STATIC_ROOT",
+			"contacts",
+			"P",
+			">\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AutomatedQG_GUI.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
