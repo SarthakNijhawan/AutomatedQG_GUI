@@ -10,7 +10,8 @@ class Document(models.Model):
     timestamp = models.DateField(auto_now=False, auto_now_add=True)
     updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True)
-    unprocessed_doc = models.FileField(upload_to="", null=True, blank=False) #TODO upload_location
+    doc_text = models.TextField(null=True, blank=True)
+    unprocessed_doc = models.FileField(upload_to="", null=True, blank=True) #TODO upload_location
     processed_doc = models.FileField(upload_to="", null=True, blank=True)   #TODO upload_location
     generated_questions_doc = models.FileField(upload_to="", null=True, blank=False)    #TODO upload_location
     questions_obj_list = []
@@ -57,3 +58,27 @@ class Question(models.Model):
 
     # class Meta:
     #     ordering = ["score"]
+
+def create_slug(instance, new_slug=None):
+    slug = slugify(instance.final_question)
+    if new_slug is not None:
+        slug = new_slug
+    qs = question.objects.filter(slug=slug).order_by("-id")
+    exists = qs.exists()
+    if exists:
+        new_slug = "%s-%s" %(slug, qs.first().id)
+        return create_slug(instance, new_slug=new_slug)
+    return slug
+
+def pre_save_post_receiver(instance, *args, **kwargs):
+    if not instance.slug:
+        instance.slug = create_slug(instance)
+    # slug = slugify(instance.title)
+    # #The 46 year Old Virgin = the-46-year-old-virgin
+    # exists = Post.objects.filter(slug=slug).exists()
+    # if exists:
+    # 	slug = "%s-%s" %(slug, instance.id)
+    # instance.slug = slug
+
+pre_save.connect(pre_save_post_receiver, sender=Question)
+pre_save.connect(pre_save_post_receiver, sender=Document)

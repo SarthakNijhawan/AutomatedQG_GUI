@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 
 from .models import Document, Question
-from .forms import QuestionForm, DocumentForm
+from .forms import QuestionForm, DocumentForm, DocumentOnlineForm
 
 # Create your views here.
 def home_page(request):
@@ -37,6 +37,22 @@ def doc_create(request):
     }
 
     return render(request, "documents/doc_create.html", context)
+
+def doc_online_create(request):
+    form = DocumentOnlineForm(request.POST or None, request.FILES or None)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        # TODO: The main processing for a document generating question
+        return HttpResponseRedirect(instance.get_absolute_url())
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "documents/doc_online_create.html", context)
+
 
 def doc_delete(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)

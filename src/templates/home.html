@@ -11,7 +11,7 @@ Home | {{ block.super }}
 
     <ul class="nav nav-pills" >
       <li role="presentation" class="active"><a href='{% url "docs:doc_create" %}'>Generate Questions from a File</a></li>
-      <li role="presentation" class="active"><a href="#">Generate Questions Online</a></li>
+      <li role="presentation" class="active"><a href='{% url "docs:doc_online_create" %}'>Generate Questions Online</a></li>
     </ul>
 
     <h3 style="color: #205067" align="left">List of Documents with generated questions: </h3>

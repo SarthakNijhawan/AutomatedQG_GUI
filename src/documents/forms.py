@@ -11,6 +11,15 @@ class DocumentForm(forms.ModelForm):
             "generated_questions_doc",
         ]
 
+class DocumentOnlineForm(forms.ModelForm):
+    class Meta:
+        model =Document
+        fields = [
+            "title",
+            "doc_text",
+            "generated_questions_doc",
+        ]
+
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
