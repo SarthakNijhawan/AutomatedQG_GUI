@@ -5,24 +5,29 @@ Generate Question | {{ block.super }}
 {% endblock title %}
 
 {% block content %}
+
+    <ul class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li class="active">New Document</li>
+    </ul>
+
     <div class="col-sm-6 col-sm-offset-3">
 
         <div style="font-family: Arial">
         <h1 style="color: lightslategray; ">
         Form for Generating Questions
-        </h1>
+        </h1><br>
 
         <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
             {{ form.as_p }}
+            <br>
             <button type="submit" class="btn btn-primary">Generate Questions</button>
         </form>
 
         </div>
+        <br><br>
 
-        <div>
-          <p align="center"> <br> <a href='{% url "docs:home_page" %}'>Home</a> </p>
 
-        </div>
     </div>
     <br>
 

@@ -5,6 +5,11 @@ New Question | {{ block.super }}
 {% endblock title %}
 
 {% block content %}
+<ul class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><a href='{{ instance_doc.get_absolute_url }}'>{{ instance_doc.title }}</a> </li>
+    <li class="active">New Question</li>
+</ul>
     <div class="col-sm-6 col-sm-offset-3">
 
         <div style="font-family: Arial">
@@ -21,7 +26,5 @@ New Question | {{ block.super }}
         </div>
     </div>
     <br>
-    <div>
-    <a href="#">Back to the List</a>
-    </div>
+
 {% endblock content%}

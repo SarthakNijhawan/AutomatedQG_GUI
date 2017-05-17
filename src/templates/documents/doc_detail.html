@@ -6,14 +6,21 @@
 
 {% block content %}
 <div>
+
+    <ul class="breadcrumb">
+          <li><a href="/">Home</a> <span class="divider"></span></li>
+          <li class="active">{{ instance.title }}</li>
+    </ul>
     <h2 align="center"> {{ instance.title }} </h2>
 </div>
+
+
 
     <div class="list-group">
 
 
         <button class="btn btn-primary" type="button">
-        <a href='{% url "docs:ques_create" %}' style="color: white"> Create a new Question </a> {#  <span class="badge">4</span>#}
+        <a href='{{instance.get_absolute_url}}question_create/' style="color: white"> Create a new Question </a> {#  <span class="badge">4</span>#}
         </button>
         <br><br>
 
@@ -29,9 +36,6 @@
             <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}edit/' role="button">Edit Document</a>
         </div>
 
-        <div>
-           <br><br> <p align="center"> <a href='{% url "docs:home_page" %}'>Home</a></p>
-        </div>
 
     </div>
 {% endblock %}

@@ -10,5 +10,8 @@ urlpatterns = [
     url(r'^(?P<slug>[\w-]+)/$', views.doc_detail, name='doc_detail'),
     url(r'^(?P<slug>[\w-]+)/edit/$', views.doc_edit, name='doc_edit'),
     url(r'^(?P<slug>[\w-]+)/delete/$', views.doc_delete, name='doc_delete'),
-    url(r'^questions/create/$', views.question_create, name="ques_create"),
+    url(r'^(?P<slug1>[\w-]+)/question_create/$', views.question_create, name="ques_create"),
+    url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/$', views.question_detail, name="ques_detail"),
+    url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/edit/$', views.question_edit, name="ques_edit"),
+    url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/delete/$', views.question_delete, name="ques_delete"),
 ]

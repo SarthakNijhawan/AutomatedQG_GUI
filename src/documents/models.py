@@ -65,7 +65,9 @@ class Question(models.Model):
         return #TODO Complete this
 
     def get_absolute_url(self):
-        return reverse('docs:doc_detail', kwargs={'slug': self.slug})
+        return reverse('docs:ques_detail', kwargs={'slug1': self.document.slug,
+                                                    'slug2': self.slug}
+                       )
 
     # class Meta:
     #     ordering = ["score"]

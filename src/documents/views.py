@@ -79,40 +79,51 @@ def doc_edit(request, slug=None):
 
     return render(request, "documents/doc_create.html", context)
 
-def question_create(request):
-    # instance_doc = get_object_or_404(Document, slug=slug)
+def question_create(request, slug1=None):
+    instance_doc = get_object_or_404(Document, slug=slug1)
     form = QuestionForm(request.POST or None)
+
     if form.is_valid():
         instance = form.save(commit=False)
+        instance.document = instance_doc
+        instance_doc.question_set.add(instance)
         instance.save()
         # TODO Update the settings in document also
-        return HttpResponseRedirect() #TODO Redirect back to the associated document list page
+        return HttpResponseRedirect(instance_doc.get_absolute_url()) #TODO Redirect back to the associated document list page
 
     context = {
         "form" : form,
+        "instance_doc" : instance_doc,
     }
     return render(request, "questions/question_form.html", context)
 
-def question_edit(request, slug=None):
-    instance = get_object_or_404(Question, slug=slug)
+def question_detail(request, slug1=None, slug2=None):
+    instance = get_object_or_404(Question, slug=slug2)
+
+    context = {
+        "instance" : instance,
+    }
+    return render(request, "questions/question_detail.html", context)
+
+def question_edit(request, slug1=None, slug2=None):
+    instance = get_object_or_404(Question, slug=slug2)
     form = QuestionForm(request.POST or None, instance=instance)
 
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
         #TODO Update the settings in document also
-        return HttpResponseRedirect()  # TODO Redirect back to the associated document list page
+        return HttpResponseRedirect(instance.document.get_absolute_url())
 
     context = {
         "form": form,
+        "instance_doc": instance.document,
     }
     return render(request, "questions/question_form.html", context)
 
-def question_delete(request, slug=None):
-    instance = get_object_or_404(Question, slug=slug)
+def question_delete(request, slug1=None, slug2=None):
+    instance = get_object_or_404(Question, slug=slug2)
     instance.delete()
     #TODO : Override delete function
 
-    return redirect("") #TODO redirect this to its parent document page list
-
-
+    return HttpResponseRedirect(instance.document.get_absolute_url())

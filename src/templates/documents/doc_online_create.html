@@ -5,6 +5,11 @@ Generate Question | {{ block.super }}
 {% endblock %}
 
 {% block content %}
+
+    <ul class="breadcrumb">
+          <li><a href="/">Home</a> <span class="divider"></span></li>
+          <li class="active">New Document</li>
+    </ul>
     <div class="col-sm-6 col-sm-offset-3">
 
         <div style="font-family: Arial">
@@ -19,10 +24,7 @@ Generate Question | {{ block.super }}
 
         </div>
 
-        <div>
-          <p align="center"> <br> <a href='{% url "docs:home_page" %}'>Home</a> </p>
 
-        </div>
     </div>
 
 {% endblock %}

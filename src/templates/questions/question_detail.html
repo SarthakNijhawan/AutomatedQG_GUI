@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ instance.final_question }} | {{ instance.document.title }}
+{% endblock title %}
+
+{% block content %}
+<ul class="breadcrumb">
+        <li><a href="/">Home</a> </li>
+        <li><a href='{{ instance.document.get_absolute_url }}'>{{ instance.document.title }}</a> </li>
+        <li class="active">{{ instance.final_question }}</li>
+</ul>
+
+<div style="font-family: Arial">
+
+    <h3 align="center"> {{ instance.final_question }} </h3>
+
+<!--TODO still left-->
+
+<br><br>
+        <div align="center">
+            <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}delete/' role="button">Delete</a>
+            <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}edit/' role="button">Edit</a>
+        </div>
+</div>
+
+{% endblock content %}
+

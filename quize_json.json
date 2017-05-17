@@ -1,0 +1,71 @@
+{
+	"quiz": {
+		"questions": [
+			{
+				"id" : 12154,
+				"type": "mcq",
+				"time": "45",
+				"question": "who won the 2010 fifa world cup ?",
+				"skippable" : true,
+				"Hint": "Can have hint as well (optional)",
+				"answer": [
+					{
+						"id": 1,
+						"option": "spain", 
+						"Description": "Can mention why this is the correct answer(optional)(optional)"
+					}
+				],
+				"options": [
+					{
+						"id": 1,
+						"option": "spain"
+					},
+					{
+						"id": 2,
+						"option": "germany",
+						"Description": "Why this is wrong(optional)"
+					},
+					{
+						"id": 3,
+						"option": "italy"
+					},
+					{
+						"id": 2,
+						"option": "argentina"
+					}
+				]
+			},
+			{
+				"id" : 12556,
+				"type": "mcq",
+				"time": "70",
+				"question": "who won the 2011 cricket world cup ?",
+				"skippable" : false,
+				"answer": [
+					{
+						"id": 3,
+						"option": "india"
+					}
+				],
+				"options": [
+					{
+						"id": 1,
+						"option": "australia"
+					},
+					{
+						"id": 2,
+						"option": "pakistan"
+					},
+					{
+						"id": 3,
+						"option": "india"
+					},
+					{
+						"id": 2,
+						"option": "sri lanka"
+					}
+				]
+			}
+		]
+	}
+}
