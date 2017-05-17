@@ -75,7 +75,7 @@ def doc_edit(request, slug=None):
         "form": form,
     }
 
-    return render(request, "post_create.html", context)
+    return render(request, "documents/doc_create.html", context)
 
 def question_create(request):
     form = QuestionForm(request.POST or None)

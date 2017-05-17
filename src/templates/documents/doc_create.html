@@ -18,10 +18,13 @@ Generate Question | {{ block.super }}
         </form>
 
         </div>
+
+        <div>
+          <p align="center"> <br> <a href='{% url "docs:home_page" %}'>Home</a> </p>
+
+        </div>
     </div>
     <br>
-    <div>
-    <a href='{% url "docs:home_page" %}'>Home</a>
-    </div>
+
 
 {% endblock %}

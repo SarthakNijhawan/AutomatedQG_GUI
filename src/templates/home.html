@@ -9,10 +9,12 @@ Home | {{ block.super }}
 
 <h1 style="color: #003366" align="center"> Automated Question Generation </h1>
 
-    <ul class="nav nav-pills" >
-      <li role="presentation" class="active"><a href='{% url "docs:doc_create" %}'>Generate Questions from a File</a></li>
-      <li role="presentation" class="active"><a href='{% url "docs:doc_online_create" %}'>Generate Questions Online</a></li>
-    </ul>
+    <br><br>
+    <div align="center">
+            <a class="btn btn-primary" href='{% url "docs:doc_create" %}' role="button">Generate Questions from a File</a>
+            <a class="btn btn-primary" href='{% url "docs:doc_online_create" %}' role="button">Generate Questions Online</a>
+    </div>
+    <br><br>
 
     <h3 style="color: #205067" align="left">List of Documents with generated questions: </h3>
 

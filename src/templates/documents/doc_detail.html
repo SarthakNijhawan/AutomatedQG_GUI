@@ -2,7 +2,7 @@
 
 {% block title %}
  {{ instance.title }} | {{ block.super }}
-{% end block %}
+{% endblock %}
 
 {% block content %}
 <div>
@@ -13,7 +13,7 @@
 
 
         <button class="btn btn-primary" type="button">
-        <a href="{% url "#" %}" style="color: white"> Create a new Question </a> {#  <span class="badge">4</span>#}
+        <a href='{% url "docs:ques_create" %}' style="color: white"> Create a new Question </a> {#  <span class="badge">4</span>#}
         </button>
         <br><br>
 
@@ -21,10 +21,17 @@
 
         {% for obj in instance.questions_obj_list %}
                 <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.final_question }} <small>Score: {{ obj.score }}</small></a>
-        {% end for %}
+        {% endfor %}
+        <div align="center">
+            <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}delete/' role="button">Delete Document</a>
+            <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}edit/' role="button">Edit Document</a>
+        </div>
+
+        <div>
+           <br><br> <p align="center"> <a href='{% url "docs:home_page" %}'>Home</a></p>
+        </div>
 
     </div>
-
-{% end block %}
+{% endblock %}
 
 

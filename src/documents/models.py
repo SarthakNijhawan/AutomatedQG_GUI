@@ -3,7 +3,14 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.template.defaultfilters import slugify
 
+import os
 # Create your models here.
+
+def upload_location_unprocessed_file(instance, filename):
+    path = "unprocessed_docs/"
+    instance_format = instance.slug + "_" + filename
+    return os.path.join(path, instance_format)
+
 
 class Document(models.Model):
     title = models.CharField(max_length=120, blank=False)
@@ -11,7 +18,8 @@ class Document(models.Model):
     updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True)
     doc_text = models.TextField(null=True, blank=True)
-    unprocessed_doc = models.FileField(upload_to="", null=True, blank=True) #TODO upload_location
+    unprocessed_doc = models.FileField(upload_to=upload_location_unprocessed_file, null=True, blank=True)
+    # extension_of_doc = models.CharField(max_length=10) #TODO Fill it with choices
     processed_doc = models.FileField(upload_to="", null=True, blank=True)   #TODO upload_location
     generated_questions_doc = models.FileField(upload_to="", null=True, blank=False)    #TODO upload_location
     questions_obj_list = []
@@ -31,7 +39,7 @@ class Document(models.Model):
     # TODO def delete(self, using=None, keep_parents=False):
 
     def get_absolute_url(self):
-        return reverse("documents:detail", kwargs={ "slug" : self.slug })
+        return reverse("docs:doc_detail", kwargs={ "slug" : self.slug })
 
 
 class Question(models.Model):
@@ -60,10 +68,10 @@ class Question(models.Model):
     #     ordering = ["score"]
 
 def create_slug(instance, new_slug=None):
-    slug = slugify(instance.final_question)
+    slug = slugify(instance.title)
     if new_slug is not None:
         slug = new_slug
-    qs = question.objects.filter(slug=slug).order_by("-id")
+    qs = Document.objects.filter(slug=slug).order_by("-id")
     exists = qs.exists()
     if exists:
         new_slug = "%s-%s" %(slug, qs.first().id)

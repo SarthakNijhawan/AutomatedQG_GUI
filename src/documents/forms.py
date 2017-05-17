@@ -8,7 +8,6 @@ class DocumentForm(forms.ModelForm):
         fields = [
             "title",
             "unprocessed_doc",
-            "generated_questions_doc",
         ]
 
 class DocumentOnlineForm(forms.ModelForm):
@@ -17,7 +16,6 @@ class DocumentOnlineForm(forms.ModelForm):
         fields = [
             "title",
             "doc_text",
-            "generated_questions_doc",
         ]
 
 class QuestionForm(forms.ModelForm):
