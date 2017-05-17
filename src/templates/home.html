@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block title %}
 Home | {{ block.super }}
 {% endblock title %}
@@ -11,8 +10,8 @@ Home | {{ block.super }}
 
     <br><br>
     <div align="center">
-            <a class="btn btn-primary" href='{% url "docs:doc_create" %}' role="button">Generate Questions from a File</a>
-            <a class="btn btn-primary" href='{% url "docs:doc_online_create" %}' role="button">Generate Questions Online</a>
+            <a class="btn btn-primary" href='{% url "docs:doc_create_file" %}' role="button">Generate Questions from a File</a>
+            <a class="btn btn-primary" href='{% url "docs:doc_create_online" %}' role="button">Generate Questions Online</a>
     </div>
     <br><br>
 

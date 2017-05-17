@@ -18,12 +18,14 @@ def home_redirect(request):
 
 def doc_detail(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
+    queryset_list = instance.question_set.all()
     context = {
+        "queryset" : queryset_list,
         "instance" : instance,
     }
     return render(request, "documents/doc_detail.html", context)
 
-def doc_create(request):
+def doc_create_file(request):
     form = DocumentForm(request.POST or None, request.FILES or None)
 
     if form.is_valid():
@@ -38,7 +40,7 @@ def doc_create(request):
 
     return render(request, "documents/doc_create.html", context)
 
-def doc_online_create(request):
+def doc_create_online(request):
     form = DocumentOnlineForm(request.POST or None, request.FILES or None)
 
     if form.is_valid():
@@ -78,6 +80,7 @@ def doc_edit(request, slug=None):
     return render(request, "documents/doc_create.html", context)
 
 def question_create(request):
+    # instance_doc = get_object_or_404(Document, slug=slug)
     form = QuestionForm(request.POST or None)
     if form.is_valid():
         instance = form.save(commit=False)
