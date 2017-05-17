@@ -1,16 +1,17 @@
-{% extends "home/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}
 Home | {{ block.super }}
-{% endblock %}
+{% endblock title %}
+
 <{% block content %}
 <div style="font-family: Arial">
 
 <h1 style="color: #003366" align="center"> Automated Question Generation </h1>
 
     <ul class="nav nav-pills" >
-      <li role="presentation" class="active"><a href='{% url 'home:GQ' %}'>Generate Questions from a File</a></li>
-      <li role="presentation" class="active"><a href="h#">Generate Questions Online</a></li>
+      <li role="presentation" class="active"><a href='{% url "docs:doc_create" %}'>Generate Questions from a File</a></li>
+      <li role="presentation" class="active"><a href="#">Generate Questions Online</a></li>
     </ul>
 
     <h3 style="color: #205067" align="left">List of Documents with generated questions: </h3>
@@ -24,4 +25,4 @@ Home | {{ block.super }}
     {% endfor %}
 
 </div>
-{% endblock %}
+{% endblock content%}

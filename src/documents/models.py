@@ -55,5 +55,5 @@ class Question(models.Model):
     def get_absolute_url(self):
         return reverse('questions:detail', kwargs={'slug': self.slug})
 
-    class Meta:
-        ordering = ["score"]
+    # class Meta:
+    #     ordering = ["score"]

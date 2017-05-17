@@ -1,4 +1,4 @@
-{% extends "home/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}
 Generate Question | {{ block.super }}
@@ -14,14 +14,14 @@ Generate Question | {{ block.super }}
 
         <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" name="Generate Questions">
+            <button type="submit" class="btn btn-primary">Generate Questions</button>
         </form>
 
         </div>
     </div>
     <br>
     <div>
-    <a href='{% url "home:home_page" %}'>Home</a>
+    <a href='{% url "docs:home_page" %}'>Home</a>
     </div>
 
 {% endblock %}
