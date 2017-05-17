@@ -1,4 +1,4 @@
-{% extends "question/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}
 New Question | {{ block.super }}
@@ -15,13 +15,13 @@ New Question | {{ block.super }}
 
         <form action="" enctype="multipart/form-data" method="POST">{% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" name="Create Question">
+            <button type="submit" class="btn btn-primary">Generate Questions</button>
         </form>
 
         </div>
     </div>
     <br>
     <div>
-    <a href="question_list.html">Back to the List</a>
+    <a href="#">Back to the List</a>
     </div>
 {% endblock content%}

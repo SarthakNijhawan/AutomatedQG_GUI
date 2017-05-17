@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^create/$', views.doc_create, name='doc_create'),
     url(r'^edit/(?P<slug>[\w-]+)/$', views.doc_edit, name='doc_edit'),
     url(r'^delete/(?P<slug>[\w-]+)/$', views.doc_delete, name='doc_delete'),
+    url(r'^questions/create', views.question_create, name="ques_create"),
 ]
