@@ -34,7 +34,25 @@ def create_question_obj(instance):
             new_ques_obj.save()
             instance.question_set.add(new_ques_obj)
             instance.save()
+    with open(generated_questions_full_path, "w") as the_file:
+        lines_list = []
+        for i in instance.question_set.all():
+            lines_list += [instance.question + "\t" + instance.sentence
+                           + "\t" + instance.correct_answer + "\t" +
+                           instance.score + "\t" + instance.slug,]
+        the_file.writelines(lines_list)
 
+#TODO : complete the function
 def generate_json_file(instance):
     "Creates and returns path of json file for Video player"
+
     return
+
+def write_unprocessed_data(instance):
+    "Writes the data given as input online into a separate file"
+    unprocessed_doc_relative_path = "unprocessed_docs/" + instance.slug + ".txt"
+    unprocessed_doc_full_path = os.path.join(MEDIA_ROOT, unprocessed_doc_relative_path)
+    with open(unprocessed_doc_full_path, "w+") as the_file:
+        the_file.write(instance.doc_text)
+    instance.unprocessed_doc.name = unprocessed_doc_relative_path
+    instance.save()

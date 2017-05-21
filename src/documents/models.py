@@ -49,7 +49,7 @@ class Question(models.Model):
     sentence = models.CharField(null=True, max_length=120, blank=False)
     score = models.FloatField(default=3.5)
     acceptable = models.BooleanField(default=False)
-    correct_answer = models.CharField(max_length=30, blank=False)
+    correct_answer = models.CharField(default="Yes", max_length=30, blank=False)
     option1 = models.CharField(max_length=30)
     option2 = models.CharField(max_length=30)
     option3 = models.CharField(max_length=30)

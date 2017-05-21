@@ -1,6 +1,8 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect, get_object_or_404
+import os
 
+from django.http import HttpResponseRedirect, HttpResponse, Http404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.conf import settings
 
 from .forms import QuestionForm, DocumentForm, DocumentOnlineForm
 from .models import Document, Question
@@ -20,6 +22,17 @@ def home_page(request):
 def home_redirect(request):
     return redirect("docs:home_page")
 
+def download_json(request, slug=None):
+    instance = get_object_or_404(Document, slug=slug)
+    filename = "json_files/" + instance.slug + ".json"
+    file_path = os.path.join(settings.MEDIA_ROOT, filename)
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/json")
+            response['Content-Disposition'] = 'attachment; filename=%s' %(filename.split("/")[-1])
+            return response
+    raise Http404
+
 def doc_detail(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
     queryset_list = instance.question_set.all()
@@ -27,7 +40,7 @@ def doc_detail(request, slug=None):
         "queryset" : queryset_list,
         "instance" : instance,
     }
-    #TODO : Download Json file
+
     return render(request, "documents/doc_detail.html", context)
 
 def doc_create_file(request):
@@ -36,18 +49,15 @@ def doc_create_file(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        # TODO: unprocessed ->  processed
+        # unprocessed ->  processed
         file_handling.unprocessed_to_processed(instance)
-        instance.save()
-        # TODO: processed -> generated
+        # processed -> generated
         run.run_system(instance)
-        instance.save()
-        # TODO: create question objects
+        # Create question objects
         file_handling.create_question_obj(instance)
-        instance.save()
-        # TODO: generate json
+        # Generate json
         file_handling.generate_json_file(instance)
-        # TODO: save process
+        # Save process
         instance.save()
         return HttpResponseRedirect(instance.get_absolute_url())
 
@@ -63,14 +73,18 @@ def doc_create_online(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        # TODO: data -> unprocessed
-        # TODO: unprocessed ->  processed
-        # TODO: save processed
-        # TODO: processed -> generated
-        # TODO: create question objects from file generated
-        # TODO: save processed
-        # TODO: generate json
-        # TODO: save processed
+        # data -> unprocessed
+        file_handling.write_unprocessed_data(instance)
+        # unprocessed ->  processed
+        file_handling.unprocessed_to_processed(instance)
+        # processed -> generated
+        run.run_system(instance)
+        # create question objects from file generated
+        file_handling.create_question_obj(instance)
+        # generate json
+        file_handling.generate_json_file(instance)
+        # save processed
+        instance.save()
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
@@ -84,7 +98,6 @@ def doc_delete(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
     instance.delete()
     #TODO Delete the files stored previously too and all the question objects
-
     return redirect("docs:home_page")
 
 def doc_edit(request, slug=None):
@@ -94,7 +107,16 @@ def doc_edit(request, slug=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        #TODO Generating questions agin the same way
+        # unprocessed ->  processed
+        file_handling.unprocessed_to_processed(instance)
+        # processed -> generated
+        run.run_system(instance)
+        # Create question objects
+        file_handling.create_question_obj(instance)
+        # Generate json
+        file_handling.generate_json_file(instance)
+        # Save process
+        instance.save()
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
@@ -110,13 +132,13 @@ def question_create(request, slug1=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.document = instance_doc
-        instance.save()
         instance.generating_medium = "Manually"
+        instance.save()
         instance_doc.question_set.add(instance)
         instance.save()
         instance_doc.save()
-        # TODO Update the settings in document also
-        return HttpResponseRedirect(instance_doc.get_absolute_url()) #TODO Redirect back to the associated document list page
+        #TODO Append question in questions_doc and regenrate json for this question
+        return HttpResponseRedirect(instance_doc.get_absolute_url())
 
     context = {
         "form" : form,
@@ -140,7 +162,7 @@ def question_edit(request, slug1=None, slug2=None):
         instance = form.save(commit=False)
         instance.edited = True
         instance.save()
-        #TODO Generate the whole json file again
+        #TODO Update the questions doc file Generate the whole json file again
         return HttpResponseRedirect(instance.document.get_absolute_url())
 
     context = {
