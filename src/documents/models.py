@@ -17,13 +17,16 @@ class Document(models.Model):
     timestamp = models.DateField(auto_now=False, auto_now_add=True)
     updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True, blank=True)
-    doc_text = models.TextField(null=True, blank=True)
-    unprocessed_doc = models.FileField(upload_to=upload_location_unprocessed_file, null=True, blank=True)
-    # extension_of_doc = models.CharField(max_length=10) #TODO Fill it with choices
-    processed_doc = models.FileField(upload_to="", null=True, blank=True)   #TODO upload_location
-    generated_questions_doc = models.FileField(upload_to="", null=True, blank=True)    #TODO upload_location
-
-    #TODO Relationships
+    doc_text = models.TextField(null=True, blank=False)
+    unprocessed_doc = models.FileField(upload_to=upload_location_unprocessed_file, null=True, blank=False)
+    processed_doc = models.FileField(null=True, blank=True)
+    generated_questions_doc = models.FileField(null=True, blank=True)
+    json_doc = models.FileField(null=True, blank=True)
+    docs_extensions = (
+                        (".srt", "Closed Caption File"),
+                        (".txt", "Text File"),
+    )
+    file_extension = models.CharField(max_length=10, null=False, blank=False, choices=docs_extensions, default=".txt")
 
     def __unicode__(self):
         return self.title
@@ -31,18 +34,19 @@ class Document(models.Model):
     def __str__(self):
         return self.title
 
-
-    # TODO class Meta:
-    #     order = ["-timestamp"]
-
-    # TODO def delete(self, using=None, keep_parents=False):
+    #TODO Save function
+    #TODO Delete function
+    # def delete(self, using=None, keep_parents=False):
+    #     super(Document, self).delete()
+    #     return
 
     def get_absolute_url(self):
         return reverse("docs:doc_detail", kwargs={ "slug" : self.slug })
 
 
 class Question(models.Model):
-    final_question = models.CharField(max_length=120, blank=False)
+    question = models.CharField(max_length=120, blank=False)
+    sentence = models.CharField(null=True, max_length=120, blank=False)
     score = models.FloatField(default=3.5)
     acceptable = models.BooleanField(default=False)
     correct_answer = models.CharField(max_length=30, blank=False)
@@ -53,16 +57,18 @@ class Question(models.Model):
     updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True)
     document = models.ForeignKey("Document", on_delete=models.CASCADE, null=True)
+    edited = models.BooleanField(default=False)
+    medium_choices = (("Automated", "Automated"),("Manually", "Manually"))
+    generation_medium = models.CharField(max_length=30, choices=medium_choices, default="Automated")
+
 
     def __unicode__(self):
-        return self.final_question
+        return self.question
 
     # For python3
     def __str__(self):
-        return self.final_question
+        return self.question
 
-    def form_question(self):
-        return #TODO Complete this
 
     def get_absolute_url(self):
         return reverse('docs:ques_detail', kwargs={'slug1': self.document.slug,
@@ -96,7 +102,7 @@ def pre_save_post_receiver_doc(instance, *args, **kwargs):
     # instance.slug = slug
 
 def create_slug_ques(instance, new_slug=None):
-    slug = slugify(instance.final_question)
+    slug = slugify(instance.question)
     if new_slug is not None:
         slug = new_slug
     qs = Question.objects.filter(slug=slug).order_by("-id")

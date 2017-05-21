@@ -1,0 +1,6 @@
+Who is Sarthak?	Sarthak is a boy.	a boy	1.8767277762266847
+Who is a boy?	Sarthak is a boy.	Sarthak	1.8429072396543158
+What was the most powerful nation?	Germany was the most powerful nation.	Germany	1.7899676452671522
+What was Germany?	Germany was the most powerful nation.	the most powerful nation	1.4874701623452131
+Is Sarthak a boy?	Sarthak is a boy.		1.0522033526787777
+Was Germany the most powerful nation?	Germany was the most powerful nation.		0.9896126701051149

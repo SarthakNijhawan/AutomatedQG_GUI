@@ -27,7 +27,7 @@
         <h3 style="font-family: Arial; color: #003366">Generated Questions List</h3><br>
 
         {% for obj in queryset %}
-                <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.final_question }} <small>Score: {{ obj.score }}</small></a>
+                <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.question }} <small>Score: {{ obj.score }}</small></a>
         {% endfor %}
 
         <br><br>

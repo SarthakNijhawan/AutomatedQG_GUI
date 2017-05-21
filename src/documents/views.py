@@ -1,8 +1,12 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .models import Document, Question
+
 from .forms import QuestionForm, DocumentForm, DocumentOnlineForm
+from .models import Document, Question
+from .processing import file_handling
+from .processing.QuestionGeneration import run
+
 
 # Create your views here.
 def home_page(request):
@@ -23,6 +27,7 @@ def doc_detail(request, slug=None):
         "queryset" : queryset_list,
         "instance" : instance,
     }
+    #TODO : Download Json file
     return render(request, "documents/doc_detail.html", context)
 
 def doc_create_file(request):
@@ -31,7 +36,19 @@ def doc_create_file(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        # TODO: The main processing for a document generating question
+        # TODO: unprocessed ->  processed
+        file_handling.unprocessed_to_processed(instance)
+        instance.save()
+        # TODO: processed -> generated
+        run.run_system(instance)
+        instance.save()
+        # TODO: create question objects
+        file_handling.create_question_obj(instance)
+        instance.save()
+        # TODO: generate json
+        file_handling.generate_json_file(instance)
+        # TODO: save process
+        instance.save()
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
@@ -46,7 +63,14 @@ def doc_create_online(request):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        # TODO: The main processing for a document generating question
+        # TODO: data -> unprocessed
+        # TODO: unprocessed ->  processed
+        # TODO: save processed
+        # TODO: processed -> generated
+        # TODO: create question objects from file generated
+        # TODO: save processed
+        # TODO: generate json
+        # TODO: save processed
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
@@ -59,7 +83,7 @@ def doc_create_online(request):
 def doc_delete(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
     instance.delete()
-    #TODO Delete the files stored previously too
+    #TODO Delete the files stored previously too and all the question objects
 
     return redirect("docs:home_page")
 
@@ -70,7 +94,7 @@ def doc_edit(request, slug=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        #TODO Generating questions
+        #TODO Generating questions agin the same way
         return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
@@ -86,8 +110,11 @@ def question_create(request, slug1=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.document = instance_doc
+        instance.save()
+        instance.generating_medium = "Manually"
         instance_doc.question_set.add(instance)
         instance.save()
+        instance_doc.save()
         # TODO Update the settings in document also
         return HttpResponseRedirect(instance_doc.get_absolute_url()) #TODO Redirect back to the associated document list page
 
@@ -111,8 +138,9 @@ def question_edit(request, slug1=None, slug2=None):
 
     if form.is_valid():
         instance = form.save(commit=False)
+        instance.edited = True
         instance.save()
-        #TODO Update the settings in document also
+        #TODO Generate the whole json file again
         return HttpResponseRedirect(instance.document.get_absolute_url())
 
     context = {
@@ -124,6 +152,4 @@ def question_edit(request, slug1=None, slug2=None):
 def question_delete(request, slug1=None, slug2=None):
     instance = get_object_or_404(Question, slug=slug2)
     instance.delete()
-    #TODO : Override delete function
-
     return HttpResponseRedirect(instance.document.get_absolute_url())

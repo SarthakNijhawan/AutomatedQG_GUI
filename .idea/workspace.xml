@@ -2,7 +2,251 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0e91cf1-662c-4db8-a8a7-f98a76e7ccc7" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/documents/processing/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/documents/processing/file_handling.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/run.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.classpath" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.classpath" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.lock" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.lock" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.log" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.mylyn/.taskListIndex/segments.gen" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.mylyn/.taskListIndex/segments_1" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.mylyn/.taskListIndex/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.mylyn/.tasks.xml.zip" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.mylyn/.tasks.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.mylyn/repositories.xml.zip" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.mylyn/repositories.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.mylyn/tasks.xml.zip" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.mylyn/tasks.xml.zip" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/4.tree" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.root/4.tree" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.css.swt.theme.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.dltk.core/Containers.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.dltk.core/Containers.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache/segments.gen" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache/segments_1" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fnm" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fnm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.frq" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.frq" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.nrm" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.nrm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tii" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tii" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tis" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tis" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments.gen" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/http-cache/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments_1" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/write.lock" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/write.lock" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fnm" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fnm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.frq" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.frq" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.nrm" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.nrm" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tii" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tii" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tis" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tis" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments.gen" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.mylyn/.taskListIndex/segments.gen" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments_1" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments_1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.7.0.20160603-1933.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.7.0.20160603-1933.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.oomph.setup.ui/dialog_settings.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.oomph.setup.ui/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/.log" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.ui/.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/FP.local.files_0/node.properties" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/FP.local.files_0/node.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/H.local_16/node.properties" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/H.local_16/node.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/node.properties" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.sarthaks-macbook-pro_525444/node.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.ui/.log" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.rse.core/.log" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.intro/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.intro/introstate" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.intro/introstate" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.metadata/version.ini" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.metadata/version.ini" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/.project" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/.project" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/README.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/README.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/AnalysisUtilities.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/AnalysisUtilities.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/BagOfWordsExtractor$1.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/BagOfWordsExtractor$1.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/BagOfWordsExtractor.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/BagOfWordsExtractor.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/GlobalProperties.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/GlobalProperties.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/InitialTransformationStep.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/InitialTransformationStep.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/LanguageModel.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/LanguageModel.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/NPClarification.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/NPClarification.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ParseResult.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ParseResult.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/PorterStemmer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/PorterStemmer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/Question.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/Question.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/QuestionAsker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/QuestionAsker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/QuestionFeatureExtractor.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/QuestionFeatureExtractor.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/QuestionRanker$1.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/QuestionRanker$1.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/QuestionRanker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/QuestionRanker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/QuestionTransducer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/QuestionTransducer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/SentenceSimplifier.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/SentenceSimplifier.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/SpecificityAnalyzer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/SpecificityAnalyzer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/StanfordParserServer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/StanfordParserServer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/SuperSenseWrapper.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/SuperSenseWrapper.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/TregexPatternFactory.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/TregexPatternFactory.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/VerbConjugator.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/VerbConjugator.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/WhPhraseGenerator.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/WhPhraseGenerator.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/BaseRanker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/BaseRanker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/IRanker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/IRanker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/RandomRanker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/RandomRanker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/RankScorer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/RankScorer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/Rankable.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/Rankable.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/RankerFactory.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/RankerFactory.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/RankingEval.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/RankingEval.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/RankingUtils.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/RankingUtils.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/ranking/WekaLinearRegressionRanker.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/ranking/WekaLinearRegressionRanker.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestCheckForChanges.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestCheckForChanges.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestNPClarification.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestNPClarification.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestQuestions.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestQuestions.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestSentenceSimplifier.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestSentenceSimplifier.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestSpecificityAnalyzer.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestSpecificityAnalyzer.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/bin/edu/cmu/ark/tests/TestWhPhraseGenerator.class" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/bin/edu/cmu/ark/tests/TestWhPhraseGenerator.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/build.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/build.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/NOUNS_WS_SS_P.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/NOUNS_WS_SS_P.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/QuestionTransducer.properties" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/QuestionTransducer.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/VERBS_WS_SS.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/VERBS_WS_SS.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/anc-v2-written.lm.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/anc-v2-written.lm.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/database_properties.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/database_properties.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/englishFactored.ser.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/englishFactored.ser.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/englishPCFG.ser.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/englishPCFG.ser.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/factual-statement-extractor.properties" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/factual-statement-extractor.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/file_properties.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/file_properties.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/map_properties.xml" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/map_properties.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/stopWordList.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/stopWordList.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/superSenseModelAllSemcor.ser.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/superSenseModelAllSemcor.ser.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/verbConjugations.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/verbConjugations.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/wordlists/README-word-lists.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/wordlists/README-word-lists.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/wordlists/dist.female.first" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/wordlists/dist.female.first" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/wordlists/dist.female.first.80percent" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/wordlists/dist.female.first.80percent" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/wordlists/dist.male.first" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/wordlists/dist.male.first" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/config/wordlists/dist.male.first.80percent" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/config/wordlists/dist.male.first.80percent" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adj.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adj.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adj.exc" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adj.exc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adj.idx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adj.idx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adv.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adv.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adv.exc" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adv.exc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/adv.idx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/adv.idx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/cntlist" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/cntlist" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/cntlist.rev" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/cntlist.rev" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/data.adj" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/data.adj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/data.adv" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/data.adv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/data.noun" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/data.noun" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/data.verb" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/data.verb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/frames.vrb" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/frames.vrb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/index.adj" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/index.adj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/index.adv" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/index.adv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/index.noun" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/index.noun" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/index.sense" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/index.sense" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/index.verb" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/index.verb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/lexnames" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/lexnames" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/log.grind.3.0" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/log.grind.3.0" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/noun.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/noun.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/noun.exc" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/noun.exc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/noun.idx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/noun.idx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/sense.idx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/sense.idx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/sentidx.vrb" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/sentidx.vrb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/sents.vrb" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/sents.vrb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/verb.Framestext" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/verb.Framestext" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/verb.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/verb.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/verb.exc" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/verb.exc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/dict/verb.idx" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/dict/verb.idx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/arkref.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/arkref.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/commons-lang-2.4.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/commons-lang-2.4.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/commons-logging.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/commons-logging.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/junit-3.8.2.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/junit-3.8.2.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/jwnl.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/jwnl.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/stanford-parser-2008-10-26.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/stanford-parser-2008-10-26.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/supersense-tagger.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/supersense-tagger.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/lib/weka-3-6.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/lib/weka-3-6.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-apache-commons-lang.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-apache-commons-lang.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-apache-commons-logging.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-apache-commons-logging.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-junit.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-junit.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-jwnl.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-jwnl.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-semcor.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-semcor.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-sst-light.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-sst-light.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-stanfordparser.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-stanfordparser.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-weka-3.6.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-weka-3.6.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE-wordnet.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE-wordnet.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/LICENSE.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/NOTICE.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/NOTICE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/README-tregex.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/README-tregex.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/licenses/README-tsurgeon.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/licenses/README-tsurgeon.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/misc/prepare.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/misc/prepare.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/models/linear-regression-ranker-reg500.ser.gz" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/models/linear-regression-ranker-reg500.ser.gz" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/models/qg-training-31-aug-2010.dat" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/models/qg-training-31-aug-2010.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/question-generation.jar" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/question-generation.jar" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/run.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/runSSTServer.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/runSSTServer.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/runStanfordParserServer.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/runStanfordParserServer.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/simplify.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/simplify.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/AnalysisUtilities.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/AnalysisUtilities.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/BagOfWordsExtractor.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/BagOfWordsExtractor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/GlobalProperties.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/GlobalProperties.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/InitialTransformationStep.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/InitialTransformationStep.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/LanguageModel.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/LanguageModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/NPClarification.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/NPClarification.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ParseResult.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ParseResult.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/PorterStemmer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/PorterStemmer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/Question.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/Question.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/QuestionAsker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/QuestionAsker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/QuestionFeatureExtractor.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/QuestionFeatureExtractor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/QuestionRanker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/QuestionRanker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/QuestionTransducer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/QuestionTransducer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/SentenceSimplifier.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/SentenceSimplifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/SpecificityAnalyzer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/SpecificityAnalyzer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/StanfordParserServer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/StanfordParserServer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/SuperSenseWrapper.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/SuperSenseWrapper.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/TregexPatternFactory.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/TregexPatternFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/VerbConjugator.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/VerbConjugator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/WhPhraseGenerator.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/WhPhraseGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/BaseRanker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/BaseRanker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/IRanker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/IRanker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/RandomRanker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/RandomRanker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/RankScorer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/RankScorer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/Rankable.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/Rankable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/RankerFactory.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/RankerFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/RankingEval.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/RankingEval.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/RankingUtils.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/RankingUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/ranking/WekaLinearRegressionRanker.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/ranking/WekaLinearRegressionRanker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestCheckForChanges.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestCheckForChanges.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestNPClarification.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestNPClarification.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestQuestions.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestQuestions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestSentenceSimplifier.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestSentenceSimplifier.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestSpecificityAnalyzer.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestSpecificityAnalyzer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/src/edu/cmu/ark/tests/TestWhPhraseGenerator.java" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/src/edu/cmu/ark/tests/TestWhPhraseGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/tests/article461.Mary_II_of_England.txt" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/tests/article461.Mary_II_of_England.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/tests/article461.Mary_II_of_England.txt.questions" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/tests/article461.Mary_II_of_England.txt.questions" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/QuestionGeneration/train-model-cmd.sh" afterPath="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/train-model-cmd.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/processing/__init__.py" afterPath="$PROJECT_DIR$/src/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/db.sqlite3" afterPath="$PROJECT_DIR$/src/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AutomatedQG_GUI/settings.py" afterPath="$PROJECT_DIR$/src/AutomatedQG_GUI/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/documents/admin.py" afterPath="$PROJECT_DIR$/src/documents/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/documents/forms.py" afterPath="$PROJECT_DIR$/src/documents/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/documents/models.py" afterPath="$PROJECT_DIR$/src/documents/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/documents/views.py" afterPath="$PROJECT_DIR$/src/documents/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/documents/doc_detail.html" afterPath="$PROJECT_DIR$/src/templates/documents/doc_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templates/questions/question_detail.html" afterPath="$PROJECT_DIR$/src/templates/questions/question_detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,42 +258,56 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="doc_create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="9" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/questions/question_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/documents/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/documents/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="119" column="42" lean-forward="false" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+            <state relative-caret-position="585">
+              <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="quize_json.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quize_json.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/documents/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file_handling.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/documents/processing/file_handling.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,52 +315,10 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/documents/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doc_online_create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_online_create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="doc_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="14" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="202">
+              <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#button#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/questions/question_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="102" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="102" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,8 +329,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -124,20 +340,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/documents/admin.py" />
-        <option value="$PROJECT_DIR$/src/AutomatedQG_GUI/settings.py" />
         <option value="$PROJECT_DIR$/src/AutomatedQG_GUI/urls.py" />
         <option value="$PROJECT_DIR$/src/templates/base.html" />
-        <option value="$PROJECT_DIR$/src/documents/forms.py" />
         <option value="$PROJECT_DIR$/src/templates/documents/doc_online_create.html" />
         <option value="$PROJECT_DIR$/src/templates/home.html" />
         <option value="$PROJECT_DIR$/src/documents/urls.py" />
-        <option value="$PROJECT_DIR$/src/documents/models.py" />
-        <option value="$PROJECT_DIR$/src/templates/documents/doc_detail.html" />
-        <option value="$PROJECT_DIR$/src/templates/questions/question_detail.html" />
         <option value="$PROJECT_DIR$/src/templates/documents/doc_create.html" />
         <option value="$PROJECT_DIR$/src/templates/questions/question_form.html" />
+        <option value="$PROJECT_DIR$/src/__init__.py" />
+        <option value="$PROJECT_DIR$/src/templates/questions/question_detail.html" />
+        <option value="$PROJECT_DIR$/src/templates/documents/doc_detail.html" />
+        <option value="$PROJECT_DIR$/src/documents/admin.py" />
+        <option value="$PROJECT_DIR$/src/AutomatedQG_GUI/settings.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/processing/file_handling.py" />
+        <option value="$PROJECT_DIR$/src/documents/processing/run.py" />
+        <option value="$PROJECT_DIR$/src/documents/forms.py" />
+        <option value="$PROJECT_DIR$/src/documents/models.py" />
+        <option value="$PROJECT_DIR$/src/documents/processing/file_handling.py" />
         <option value="$PROJECT_DIR$/src/documents/views.py" />
+        <option value="$PROJECT_DIR$/src/run.sh" />
+        <option value="$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.py" />
       </list>
     </option>
   </component>
@@ -208,50 +431,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomatedQG_GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomatedQG_GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="questions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomatedQG_GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomatedQG_GUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="documents" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -271,6 +450,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="documents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomatedQG_GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomatedQG_GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestionGeneration" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomatedQG_GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomatedQG_GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media_cdn" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -286,6 +509,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/documents/processing/QuestionGeneration" />
+      <recent name="$PROJECT_DIR$/src/documents/processing" />
+      <recent name="$PROJECT_DIR$/src/documents" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -306,6 +533,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -481,16 +719,15 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -499,6 +736,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -534,42 +772,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/documents/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/documents/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/documents/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -588,7 +790,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
+          <folding>
+            <element signature="e#0#24#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -599,19 +803,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/doc_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/doc_create.html" />
     <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -619,15 +815,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/questions/question_form.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
+          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -639,11 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/documents/models.py">
+    <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_online_create.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -651,8 +851,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="14" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/questions/question_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="102" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/QuestionGeneration/simplify.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/QuestionGeneration/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QuestionGeneration/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/QuestionGeneration/input.txt" />
+    <entry file="file://$PROJECT_DIR$/QuestionGeneration/output.txt" />
+    <entry file="file://$PROJECT_DIR$/QuestionGeneration/run.py" />
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processing/preprocessing.py" />
+    <entry file="file://$PROJECT_DIR$/src/documents/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#a#0;n#button#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -660,18 +937,43 @@
     <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
-          <folding />
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/templates/questions/question_detail.html">
+    <entry file="file://$PROJECT_DIR$/src/documents/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/doc_create.html" />
+    <entry file="file://$PROJECT_DIR$/src/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="102" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="102" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -679,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -687,14 +988,139 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/documents/doc_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="84" lean-forward="true" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/questions/question_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AutomatedQG_GUI/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1091">
+          <caret line="120" column="18" lean-forward="true" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="48" column="43" lean-forward="false" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/documents/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="119" column="42" lean-forward="false" selection-start-line="119" selection-start-column="42" selection-end-line="119" selection-end-column="42" />
+        <state relative-caret-position="585">
+          <caret line="39" column="56" lean-forward="true" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quize_json.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/file_handling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/processing/QuestionGeneration/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/documents/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding />
         </state>
       </provider>

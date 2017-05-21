@@ -8,6 +8,7 @@ class DocumentForm(forms.ModelForm):
         fields = [
             "title",
             "unprocessed_doc",
+            "file_extension",
         ]
 
 class DocumentOnlineForm(forms.ModelForm):
@@ -16,13 +17,15 @@ class DocumentOnlineForm(forms.ModelForm):
         fields = [
             "title",
             "doc_text",
+            "file_extension",
         ]
 
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question
         fields = [
-            "final_question",
+            "question",
+            "sentence",
             "correct_answer",
             "option1",
             "option2",
