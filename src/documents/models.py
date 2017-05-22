@@ -39,18 +39,18 @@ class Document(models.Model):
         return self.title
 
     def delete(self, *args, **kwargs):
-        unprocessed_doc_path = join(MEDIA_ROOT, self.unprocessed_doc.path)
-        processed_doc_path = join(MEDIA_ROOT, self.processed_doc.path)
-        generated_questions_doc_path = join(MEDIA_ROOT, self.generated_questions_doc.path)
-        # json_path = join(MEDIA_ROOT, self.json_doc.path)
-        if exists(unprocessed_doc_path):
+        if self.unprocessed_doc :
+            unprocessed_doc_path = join(MEDIA_ROOT, self.unprocessed_doc.path)
             remove(unprocessed_doc_path)
-        if exists(processed_doc_path):
+        if self.processed_doc :
+            processed_doc_path = join(MEDIA_ROOT, self.processed_doc.path)
             remove(processed_doc_path)
-        if exists(generated_questions_doc_path):
+        if self.generated_questions_doc :
+            generated_questions_doc_path = join(MEDIA_ROOT, self.generated_questions_doc.path)
             remove(generated_questions_doc_path)
-        # if exists(json_path):
-        #     self.json_doc.delete()
+        if self.json_doc :
+            json_doc_path = join(MEDIA_ROOT, self.json_doc.path)
+            remove(json_doc_path)
 
         super(Document, self).delete(*args, **kwargs)
 

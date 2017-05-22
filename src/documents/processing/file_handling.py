@@ -6,7 +6,7 @@ MEDIA_ROOT = settings.MEDIA_ROOT
 
 def unprocessed_to_processed(instance):
     "Process the unprocessed file and saves it in the instance's Field"
-    print(os.getcwd())
+
     unprocessed_doc_filename_full_path = os.path.join(MEDIA_ROOT, instance.unprocessed_doc.name)
     processed_doc_filename_relative_path = "processed_docs/" + instance.slug + ".txt"
     processed_doc_filename_full_path =  os.path.join(MEDIA_ROOT, processed_doc_filename_relative_path)
@@ -20,6 +20,7 @@ def unprocessed_to_processed(instance):
 
 def create_question_obj(instance):
     "Creates question objects from the file generated from the automated system"
+
     generated_questions_full_path = os.path.join(MEDIA_ROOT, instance.generated_questions_doc.name)
     with open(generated_questions_full_path, "r+") as the_file:
         content = the_file.readlines()
@@ -45,6 +46,7 @@ def create_question_obj(instance):
 
 def generate_json_file(instance):
     "Creates json file for Video player and takes instance of a document as a whole"
+
     doc_dict = {}
     doc_dict["quiz"] = {}
     doc_dict["quiz"]["questions"] = []
@@ -63,6 +65,7 @@ def generate_json_file(instance):
 
 def write_unprocessed_data(instance):
     "Writes the data given as input online into a separate file"
+
     unprocessed_doc_relative_path = "unprocessed_docs/" + instance.slug + ".txt"
     unprocessed_doc_full_path = os.path.join(MEDIA_ROOT, unprocessed_doc_relative_path)
     with open(unprocessed_doc_full_path, "w+") as the_file:
@@ -72,6 +75,7 @@ def write_unprocessed_data(instance):
 
 def append_question_in_doc(instance):
     "Appends manually created question into the generated_questions_doc"
+
     with open(os.path.join(MEDIA_ROOT, instance.generated_questions_doc.name), "a") as the_file:
         string = instance.question + "\t" + instance.sentence + "\t" + instance.correct_answer + "\t" + str(instance.score) + "\t" + str(instance.slug) + "\n"
 
@@ -79,6 +83,7 @@ def append_question_in_doc(instance):
 
 def create_json_dict_question(instance):
     "Returns a dict, writable into a json file"
+
     final_dict = {}
     final_dict["id"] = instance.id
     final_dict["type"] = instance.type

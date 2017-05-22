@@ -14,5 +14,5 @@ urlpatterns = [
     url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/$', views.question_detail, name="ques_detail"),
     url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/edit/$', views.question_edit, name="ques_edit"),
     url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/delete/$', views.question_delete, name="ques_delete"),
-    url(r'^(?P<slug1>[\w-]+)/download_json/$', views.download_json, name="json_download"),
+    url(r'^(?P<slug>[\w-]+)/download_json/$', views.download_json_file, name="json_download"),
 ]

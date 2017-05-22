@@ -1,5 +1,4 @@
 import os
-
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
@@ -22,8 +21,8 @@ def home_page(request):
 def home_redirect(request):
     return redirect("docs:home_page")
 
-def download_json(request, slug1=None):
-    instance = get_object_or_404(Document, slug=slug1)
+def download_json_file(request, slug=None):
+    instance = get_object_or_404(Document, slug=slug)
     filename = instance.json_doc.name
     file_path = os.path.join(settings.MEDIA_ROOT, filename)
     print(file_path)
