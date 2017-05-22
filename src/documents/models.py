@@ -1,15 +1,19 @@
+from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
 from django.template.defaultfilters import slugify
 
-import os
+from os.path import join, exists
+from os import remove
+
+MEDIA_ROOT = settings.MEDIA_ROOT
 # Create your models here.
 
 def upload_location_unprocessed_file(instance, filename):
     path = "unprocessed_docs/"
     instance_format = instance.slug + "_" + filename
-    return os.path.join(path, instance_format)
+    return join(path, instance_format)
 
 
 class Document(models.Model):
@@ -34,11 +38,21 @@ class Document(models.Model):
     def __str__(self):
         return self.title
 
-    #TODO Save function
-    #TODO Delete function
-    # def delete(self, using=None, keep_parents=False):
-    #     super(Document, self).delete()
-    #     return
+    def delete(self, *args, **kwargs):
+        unprocessed_doc_path = join(MEDIA_ROOT, self.unprocessed_doc.path)
+        processed_doc_path = join(MEDIA_ROOT, self.processed_doc.path)
+        generated_questions_doc_path = join(MEDIA_ROOT, self.generated_questions_doc.path)
+        # json_path = join(MEDIA_ROOT, self.json_doc.path)
+        if exists(unprocessed_doc_path):
+            remove(unprocessed_doc_path)
+        if exists(processed_doc_path):
+            remove(processed_doc_path)
+        if exists(generated_questions_doc_path):
+            remove(generated_questions_doc_path)
+        # if exists(json_path):
+        #     self.json_doc.delete()
+
+        super(Document, self).delete(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse("docs:doc_detail", kwargs={ "slug" : self.slug })
@@ -60,7 +74,7 @@ class Question(models.Model):
     edited = models.BooleanField(default=False)
     medium_choices = (("Automated", "Automated"),("Manually", "Manually"))
     generation_medium = models.CharField(max_length=30, choices=medium_choices, default="Automated")
-
+    time = models.TimeField(null=True, blank=False, auto_now=False, auto_now_add=False)
 
     def __unicode__(self):
         return self.question

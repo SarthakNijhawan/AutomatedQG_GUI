@@ -31,4 +31,5 @@ class QuestionForm(forms.ModelForm):
             "option2",
             "option3",
             "acceptable",
+            "time",
         ]

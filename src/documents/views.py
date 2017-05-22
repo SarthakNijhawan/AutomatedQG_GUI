@@ -97,7 +97,6 @@ def doc_create_online(request):
 def doc_delete(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
     instance.delete()
-    #TODO Delete the files stored previously too and all the question objects
     return redirect("docs:home_page")
 
 def doc_edit(request, slug=None):
@@ -135,9 +134,10 @@ def question_create(request, slug1=None):
         instance.generating_medium = "Manually"
         instance.save()
         instance_doc.question_set.add(instance)
-        instance.save()
         instance_doc.save()
-        #TODO Append question in questions_doc and regenrate json for this question
+        #Appends question in question_doc
+        file_handling.append_question_in_doc(instance)
+        #TODO regenerate json for this question
         return HttpResponseRedirect(instance_doc.get_absolute_url())
 
     context = {

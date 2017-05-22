@@ -37,14 +37,14 @@ def create_question_obj(instance):
     with open(generated_questions_full_path, "w") as the_file:
         lines_list = []
         for i in instance.question_set.all():
-            lines_list += [instance.question + "\t" + instance.sentence
-                           + "\t" + instance.correct_answer + "\t" +
-                           instance.score + "\t" + instance.slug,]
+            lines_list += [i.question + "\t" + i.sentence
+                           + "\t" + i.correct_answer + "\t" +
+                           str(i.score) + "\t" + str(i.slug) + "\n",]
         the_file.writelines(lines_list)
 
 #TODO : complete the function
 def generate_json_file(instance):
-    "Creates and returns path of json file for Video player"
+    "Creates json file for Video player"
 
     return
 
@@ -56,3 +56,10 @@ def write_unprocessed_data(instance):
         the_file.write(instance.doc_text)
     instance.unprocessed_doc.name = unprocessed_doc_relative_path
     instance.save()
+
+def append_question_in_doc(instance):
+    "Appends manually created question into the generated_questions_doc"
+    with open(os.path.join(MEDIA_ROOT, instance.generated_questions_doc.name), "a") as the_file:
+        string = instance.question + "\t" + instance.sentence + "\t" + instance.correct_answer + "\t" + str(instance.score) + "\t" + str(instance.slug) + "\n"
+
+        the_file.write(string)
