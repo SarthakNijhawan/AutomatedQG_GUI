@@ -26,10 +26,13 @@ class QuestionForm(forms.ModelForm):
         fields = [
             "question",
             "sentence",
+            "hint",
             "correct_answer",
             "option1",
             "option2",
             "option3",
             "acceptable",
             "time",
+            "type",
+            "skippable",
         ]

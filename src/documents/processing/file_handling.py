@@ -1,6 +1,6 @@
 from django.conf import settings
 from ..models import Question
-import os
+import os, json
 
 MEDIA_ROOT = settings.MEDIA_ROOT
 
@@ -42,11 +42,24 @@ def create_question_obj(instance):
                            str(i.score) + "\t" + str(i.slug) + "\n",]
         the_file.writelines(lines_list)
 
-#TODO : complete the function
-def generate_json_file(instance):
-    "Creates json file for Video player"
 
-    return
+def generate_json_file(instance):
+    "Creates json file for Video player and takes instance of a document as a whole"
+    doc_dict = {}
+    doc_dict["quiz"] = {}
+    doc_dict["quiz"]["questions"] = []
+    for i in instance.question_set.all().order_by("score"):
+        question_dict = create_json_dict_question(i)
+        doc_dict["quiz"]["questions"].append(question_dict)
+
+    json_file_relative_path = "json_files/" + instance.slug + ".json"
+    json_file_full_path = os.path.join(MEDIA_ROOT, json_file_relative_path)
+
+    with open(json_file_full_path, "w") as outfile:
+        json.dump(doc_dict, outfile)
+
+    instance.json_doc.name = json_file_relative_path
+    instance.save()
 
 def write_unprocessed_data(instance):
     "Writes the data given as input online into a separate file"
@@ -63,3 +76,44 @@ def append_question_in_doc(instance):
         string = instance.question + "\t" + instance.sentence + "\t" + instance.correct_answer + "\t" + str(instance.score) + "\t" + str(instance.slug) + "\n"
 
         the_file.write(string)
+
+def create_json_dict_question(instance):
+    "Returns a dict, writable into a json file"
+    final_dict = {}
+    final_dict["id"] = instance.id
+    final_dict["type"] = instance.type
+    final_dict["time"] = instance.time
+    final_dict["question"] =  instance.question
+    final_dict["skippable"] = instance.skippable
+    final_dict["Hint"] = instance.hint
+    final_dict["answer"] = []
+    final_dict["options"] = []
+
+    final_dict["answer"].append({
+        "id" : 1,
+        "option" : instance.correct_answer,
+        "Description" : None,}
+    )
+
+    final_dict["options"].append({
+        "id": 1,
+        "option": instance.correct_answer,
+        "Description": None,
+    })
+    final_dict["options"].append({
+        "id": 2,
+        "option": instance.option1,
+        "Description": None,
+    })
+    final_dict["options"].append({
+        "id": 3,
+        "option": instance.option2,
+        "Description": None,
+    })
+    final_dict["options"].append({
+        "id": 4,
+        "option": instance.option3,
+        "Description": None,
+    })
+
+    return final_dict

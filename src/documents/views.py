@@ -22,10 +22,12 @@ def home_page(request):
 def home_redirect(request):
     return redirect("docs:home_page")
 
-def download_json(request, slug=None):
-    instance = get_object_or_404(Document, slug=slug)
-    filename = "json_files/" + instance.slug + ".json"
+def download_json(request, slug1=None):
+    instance = get_object_or_404(Document, slug=slug1)
+    filename = instance.json_doc.name
     file_path = os.path.join(settings.MEDIA_ROOT, filename)
+    print(file_path)
+
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
             response = HttpResponse(fh.read(), content_type="application/json")
@@ -35,7 +37,7 @@ def download_json(request, slug=None):
 
 def doc_detail(request, slug=None):
     instance = get_object_or_404(Document, slug=slug)
-    queryset_list = instance.question_set.all()
+    queryset_list = instance.question_set.all().order_by("-score")
     context = {
         "queryset" : queryset_list,
         "instance" : instance,

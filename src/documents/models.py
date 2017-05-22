@@ -61,6 +61,7 @@ class Document(models.Model):
 class Question(models.Model):
     question = models.CharField(max_length=120, blank=False)
     sentence = models.CharField(null=True, max_length=120, blank=False)
+    hint = models.CharField(max_length=50, blank=True, null=True)
     score = models.FloatField(default=3.5)
     acceptable = models.BooleanField(default=False)
     correct_answer = models.CharField(default="Yes", max_length=30, blank=False)
@@ -75,6 +76,9 @@ class Question(models.Model):
     medium_choices = (("Automated", "Automated"),("Manually", "Manually"))
     generation_medium = models.CharField(max_length=30, choices=medium_choices, default="Automated")
     time = models.TimeField(null=True, blank=False, auto_now=False, auto_now_add=False)
+    type_choices = (("mcq", "Multiple Choice"),("reason", "Reasoning"),)
+    type = models.CharField(max_length=15, choices=type_choices, default="mcq", null=True, blank=False)
+    skippable = models.BooleanField(blank=False, default=True)
 
     def __unicode__(self):
         return self.question
