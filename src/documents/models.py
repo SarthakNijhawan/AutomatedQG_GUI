@@ -17,7 +17,7 @@ def upload_location_unprocessed_file(instance, filename):
 
 
 class Document(models.Model):
-    title = models.CharField(max_length=120, blank=False)
+    title = models.CharField(max_length=30, blank=False)
     timestamp = models.DateField(auto_now=False, auto_now_add=True)
     updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True, blank=True)
@@ -31,6 +31,8 @@ class Document(models.Model):
                         (".txt", "Text File"),
     )
     file_extension = models.CharField(max_length=10, null=False, blank=False, choices=docs_extensions, default=".txt")
+
+    file_as_source = models.BooleanField(blank=False, default=True)
 
     def __unicode__(self):
         return self.title
@@ -60,7 +62,7 @@ class Document(models.Model):
 
 class Question(models.Model):
     question = models.CharField(max_length=120, blank=False)
-    sentence = models.CharField(null=True, max_length=120, blank=False)
+    sentence = models.CharField(null=True, max_length=160, blank=False)
     hint = models.CharField(max_length=50, blank=True, null=True)
     score = models.FloatField(default=3.5)
     acceptable = models.BooleanField(default=False)
@@ -73,10 +75,13 @@ class Question(models.Model):
     slug = models.SlugField(unique=True)
     document = models.ForeignKey("Document", on_delete=models.CASCADE, null=True)
     edited = models.BooleanField(default=False)
-    medium_choices = (("Automated", "Automated"),("Manually", "Manually"))
-    generation_medium = models.CharField(max_length=30, choices=medium_choices, default="Automated")
+    medium_choices = (
+                        ("Automated", "Automated"),
+                        ("Manually", "Manually")
+    )
+    source = models.CharField(max_length=1, choices=medium_choices, default="Automated", null=True, blank=False)
     time = models.TimeField(null=True, blank=False, auto_now=False, auto_now_add=False)
-    type_choices = (("mcq", "Multiple Choice"),("reason", "Reasoning"),)
+    type_choices = (("mcq", "Multiple Choice"),("reason", "Reasoning"))
     type = models.CharField(max_length=15, choices=type_choices, default="mcq", null=True, blank=False)
     skippable = models.BooleanField(blank=False, default=True)
 

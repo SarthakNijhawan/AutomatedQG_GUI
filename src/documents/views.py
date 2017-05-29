@@ -49,6 +49,7 @@ def doc_create_file(request):
 
     if form.is_valid():
         instance = form.save(commit=False)
+        instance.file_as_source = True
         instance.save()
         # unprocessed ->  processed
         file_handling.unprocessed_to_processed(instance)
@@ -69,10 +70,11 @@ def doc_create_file(request):
     return render(request, "documents/doc_create.html", context)
 
 def doc_create_online(request):
-    form = DocumentOnlineForm(request.POST or None, request.FILES or None)
+    form = DocumentOnlineForm(request.POST or None)
 
     if form.is_valid():
         instance = form.save(commit=False)
+        instance.file_as_source = False
         instance.save()
         # data -> unprocessed
         file_handling.write_unprocessed_data(instance)
@@ -125,6 +127,35 @@ def doc_edit(request, slug=None):
 
     return render(request, "documents/doc_create.html", context)
 
+def doc_online_edit(request, slug=None):
+    instance = get_object_or_404(Document, slug=slug)
+    form = DocumentOnlineForm(request.POST or None, instance=instance)
+
+    if form.is_valid():
+        instance = form.save(commit=False)
+        for i in instance.question_set.all():
+            i.delete()
+        instance.save()
+        # data -> unprocessed
+        file_handling.write_unprocessed_data(instance)
+        # unprocessed ->  processed
+        file_handling.unprocessed_to_processed(instance)
+        # processed -> generated
+        run.run_system(instance)
+        # Create question objects
+        file_handling.create_question_obj(instance)
+        # Generate json
+        file_handling.generate_json_file(instance)
+        # Save process
+        instance.save()
+        return HttpResponseRedirect(instance.get_absolute_url())
+
+    context = {
+        "form": form,
+    }
+
+    return render(request, "documents/doc_create.html", context)
+
 def question_create(request, slug1=None):
     instance_doc = get_object_or_404(Document, slug=slug1)
     form = QuestionForm(request.POST or None)
@@ -132,7 +163,8 @@ def question_create(request, slug1=None):
     if form.is_valid():
         instance = form.save(commit=False)
         instance.document = instance_doc
-        instance.generating_medium = "Manually"
+        instance.save()
+        instance.source = "Manually"
         instance.save()
         instance_doc.question_set.add(instance)
         instance_doc.save()

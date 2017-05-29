@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^create_new_doc_online/', views.doc_create_online, name='doc_create_online'),
     url(r'^(?P<slug>[\w-]+)/$', views.doc_detail, name='doc_detail'),
     url(r'^(?P<slug>[\w-]+)/edit/$', views.doc_edit, name='doc_edit'),
+    url(r'^(?P<slug>[\w-]+)/edit_online/$', views.doc_online_edit, name='doc_edit_online'),
     url(r'^(?P<slug>[\w-]+)/delete/$', views.doc_delete, name='doc_delete'),
     url(r'^(?P<slug1>[\w-]+)/question_create/$', views.question_create, name="ques_create"),
     url(r'^(?P<slug1>[\w-]+)/(?P<slug2>[\w-]+)/$', views.question_detail, name="ques_detail"),

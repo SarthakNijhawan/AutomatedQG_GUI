@@ -76,7 +76,7 @@ def write_unprocessed_data(instance):
 def append_question_in_doc(instance):
     "Appends manually created question into the generated_questions_doc"
 
-    with open(os.path.join(MEDIA_ROOT, instance.generated_questions_doc.name), "a") as the_file:
+    with open(os.path.join(MEDIA_ROOT, instance.document.generated_questions_doc.name), "a") as the_file:
         string = instance.question + "\t" + instance.sentence + "\t" + instance.correct_answer + "\t" + str(instance.score) + "\t" + str(instance.slug) + "\n"
 
         the_file.write(string)

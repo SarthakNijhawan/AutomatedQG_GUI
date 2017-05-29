@@ -27,13 +27,17 @@
         <h3 style="font-family: Arial; color: #003366">Generated Questions List</h3><br>
 
         {% for obj in queryset %}
-                <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.question }} <small>Score: {{ obj.score }}</small></a>
+                <a href="{{ obj.get_absolute_url }}" class="list-group-item">{{ obj.question }} <small>Score: {{ obj.score }} | {{ obj.source }}{% if obj.edited %} | Edited{% endif %}</small></a>
         {% endfor %}
 
         <br><br>
         <div align="center">
             <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}delete/' role="button">Delete Document</a>
+            {% if instance.file_as_source %}
             <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}edit/' role="button">Edit Document</a>
+            {% else %}
+            <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}edit_online/' role="button">Edit Document</a>
+            {% endif %}
             <a class="btn btn-primary" href='{{ instance.get_absoulte_url }}download_json/' role="button">Download Json File</a>
         </div>
 

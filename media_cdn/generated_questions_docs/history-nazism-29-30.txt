@@ -18,3 +18,7 @@ What will many of you know?	Many of you will know something about the Nazis and 
 Had his father been a Nazi and a supporter of Adolf Hitler?	Although Helmuth may not have realized all that it meant, his father had been a Nazi and a supporter of Adolf Hitler.		0.744174898675	had-his-father-been-a-nazi-and-a-supporter-of-adolf-hitler
 Will many of you know something about the Nazis and Hitler?	Many of you will know something about the Nazis and Hitler.		0.604751496637	will-many-of-you-know-something-about-the-nazis-and-hitler
 What may Helmuth not have realized all?	Although Helmuth may not have realized all that it meant, his father had been a Nazi and a supporter of Adolf Hitler.	that it meant	0.461766114657	what-may-helmuth-not-have-realized-all
+Who was Hitler?	Hitler was a person	a person	3.5	who-was-hitler-174
+Who was Hitler?	Hitler was a person	a person	3.5	who-was-hitler-174-175
+What did I learn?	I learnt Neural networks	Neural Nets	3.5	what-did-i-learn
+What did I learn?	I learnt Neural networks	Neural Nets	3.5	what-did-i-learn-177

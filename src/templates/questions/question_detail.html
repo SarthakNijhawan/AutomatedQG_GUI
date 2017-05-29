@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-{{ instance.final_question }} | {{ instance.document.title }}
+{{ instance.question }} | {{ instance.document.title }}
 {% endblock title %}
 
 {% block content %}
@@ -13,9 +13,15 @@
 
 <div style="font-family: Arial">
 
-    <h3 align="center"> {{ instance.question }} </h3>
-
-<!--TODO still left-->
+    <h4 >Question : <small> {{ instance.question }} | {{ instance.generation_medium }}</small></h4>
+    <h4 >Sentence : <small>{{ instance.sentence }}</small></h4>
+    <h4 >Score : <small>{{ instance.score }}</small></h4>
+    <h4 >Hint : <small>{{ instance.hint }}</small></h4>
+    <h4 >Answer : <small>{{ instance.correct_answer }}</small></h4>
+    <h4 >Document : <small>{{ instance.document.title }}</small></h4>
+    <h4 >Edited : <small>{{ instance.edited }}</small></h4>
+    <h4 >Time of appearance : <small>{{ instance.time }}</small></h4>
+    <h4 >Type : <small>{{ instance.type }}</small></h4>
 
 <br><br>
         <div align="center">
