@@ -1,1 +1,0 @@
-Over the last 5-10 years, the JSON format has been one of, if not the most, popular ways to serialize data.

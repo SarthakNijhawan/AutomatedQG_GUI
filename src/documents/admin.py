@@ -10,7 +10,7 @@ class DocumentModelAdmin(admin.ModelAdmin):
         model = Document
 
 class QuestionModelAdmin(admin.ModelAdmin):
-    list_display = ["question", "score", "timestamp", "acceptable"]
+    list_display = ["question", "score", "time", "acceptable"]
 
     class Meta:
         model = Question

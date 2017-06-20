@@ -1,7 +1,0 @@
-Who cut a short trip to Siberia?	Namo, the paramount leader of all times, cut a short trip to Siberia.	Namo	2.9297437823	who-cut-a-short-trip-to-siberia
-What did Namo cut?	Namo, the paramount leader of all times, cut a short trip to Siberia.	a short trip to Siberia	2.56261975672	what-did-namo-cut
-Who was the paramount leader of all times?	Namo, the paramount leader of all times, cut a short trip to Siberia.	Namo	2.48319336285	who-was-the-paramount-leader-of-all-times
-What was Namo the paramount leader of?	Namo, the paramount leader of all times, cut a short trip to Siberia.	of all times	2.45880173928	what-was-namo-the-paramount-leader-of
-Who was Namo?	Namo, the paramount leader of all times, cut a short trip to Siberia.	the paramount leader of all times	2.13098260788	who-was-namo
-Did Namo cut a short trip to Siberia?	Namo, the paramount leader of all times, cut a short trip to Siberia.		2.02825794388	did-namo-cut-a-short-trip-to-siberia
-Was Namo the paramount leader of all times?	Namo, the paramount leader of all times, cut a short trip to Siberia.		1.47082289213	was-namo-the-paramount-leader-of-all-times
