@@ -1,8 +1,0 @@
-Who picked up the phone?	To call John, he picked up the phone.	Tom	2.16936236758	who-picked-up-the-phone
-What did Tom pick up?	To call John, he picked up the phone.	the phone	2.13557245799	what-did-tom-pick-up
-What was Tom at?	Tom was at work.	at work	2.01271472153	what-was-tom-at
-Who was at work?	Tom was at work.	Tom	1.93336497041	who-was-at-work
-Did Tom pick up the phone?	To call John, he picked up the phone.		1.20334480273	did-tom-pick-up-the-phone
-Was Tom at work?	Tom was at work.		1.06664117751	was-tom-at-work
-What did he pick up?	To call John, he picked up the phone.	the phone	0.867720189139	what-did-he-pick-up
-Did he pick up the phone?	To call John, he picked up the phone.		0.0749364254231	did-he-pick-up-the-phone
