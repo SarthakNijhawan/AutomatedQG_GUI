@@ -7,8 +7,8 @@ class DocumentForm(forms.ModelForm):
         model = Document
         fields = [
             "title",
-            "unprocessed_doc",
-            "file_extension",
+            "input_file",
+            "format",
         ]
 
 class DocumentOnlineForm(forms.ModelForm):
@@ -16,8 +16,8 @@ class DocumentOnlineForm(forms.ModelForm):
         model =Document
         fields = [
             "title",
-            "doc_text",
-            "file_extension",
+            "content",
+            "format",
         ]
 
 class QuestionForm(forms.ModelForm):

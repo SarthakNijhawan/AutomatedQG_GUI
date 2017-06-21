@@ -10,11 +10,16 @@ Home | {{ block.super }}
 </ul>
 <h1 style="color: #003366" align="center"> Automated Question Generation </h1>
 
-    <br><br>
+    <br>
     <div align="center">
-            <a class="btn btn-primary" href='{% url "docs:doc_create_file" %}' role="button">Generate Questions from a File</a>
+            <h3 style="color: #666666"> Choose one of the following options: </h3> <br>
+            <a class="btn btn-primary" href='{% url "docs:doc_create_file" %}' role="button">Generate Questions from a Text File</a>
             <a class="btn btn-primary" href='{% url "docs:doc_create_online" %}' role="button">Generate Questions Online</a>
     </div>
+
+
+</div>
+
     <br><br>
 
     <h3 style="color: #205067" align="left">List of Documents with generated questions: </h3>

@@ -1,13 +1,35 @@
 from django.conf import settings
-from ..models import Question
+from ..models import Question, Document
 import os, json
 
 MEDIA_ROOT = settings.MEDIA_ROOT
 
+def json_processing(instance):
+    instances = []
+    with open(instance.input_file, "r") as thefile:
+        json_str = thefile.read()
+        json_dict = json.loads(json_str)
+
+    for document in json_dict["documents"]:
+        new_instance = Document.objects.create(title=document["title"], input_file=instance.input_file)
+        processed_doc_filename_relative_path = "processed_docs/" + new_instance.slug + ".txt"
+        processed_doc_filename_full_path = os.path.join(MEDIA_ROOT, processed_doc_filename_relative_path)
+
+        with open(processed_doc_filename_full_path, "w") as thefile:
+            doc_string = [sentence["sentence"] for sentence in document["sentences"]] + "\n"
+            thefile.writelines(doc_string)
+
+        new_instance.processed_file.name = processed_doc_filename_relative_path
+        new_instance.save()
+
+        instances += [new_instance, ]
+
+    return instances
+
 def unprocessed_to_processed(instance):
     "Process the unprocessed file and saves it in the instance's Field"
 
-    unprocessed_doc_filename_full_path = os.path.join(MEDIA_ROOT, instance.unprocessed_doc.name)
+    unprocessed_doc_filename_full_path = os.path.join(MEDIA_ROOT, instance.input_file.name)
     processed_doc_filename_relative_path = "processed_docs/" + instance.slug + ".txt"
     processed_doc_filename_full_path =  os.path.join(MEDIA_ROOT, processed_doc_filename_relative_path)
     with open(unprocessed_doc_filename_full_path, "r+") as input_file:

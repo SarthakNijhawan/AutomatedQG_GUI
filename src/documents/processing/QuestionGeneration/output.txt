@@ -1,0 +1,9 @@
+What assumes you have a Contacts model that has already been imported?	This example assumes you have a Contacts model that has already been imported.	this example	1.2769930851995368
+Who give both the view and the accompanying template to show how you can display the results?	We give both the view and the accompanying template to show how you can display the results.	we	1.2618250642319162
+Who does this example assume have a Contacts model that has already been imported?	This example assumes you have a Contacts model that has already been imported.	you	1.075636960612734
+What do we give to show how you can display the results?	We give both the view and the accompanying template to show how you can display the results.	both the view and the accompanying template	0.9123723326085189
+What does this example assume you have?	This example assumes you have a Contacts model that has already been imported.	a Contacts model that has already been imported	0.6671020637623539
+What do we give both the view and the accompanying template to show?	We give both the view and the accompanying template to show how you can display the results.	how you can display the results	0.4117747085867596
+Does this example assume you have a Contacts model that has already been imported?	This example assumes you have a Contacts model that has already been imported.		0.24570720935399493
+Do we give both the view and the accompanying template to show how you can display the results?	We give both the view and the accompanying template to show how you can display the results.		0.17740984652262037
+What does this example assume?	This example assumes you have a Contacts model that has already been imported.	you have a Contacts model that has already been imported	-0.2116894200722702

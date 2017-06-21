@@ -1,0 +1,3 @@
+Here’s a slightly more complex example using Paginator in a view to paginate a queryset. 
+We give both the view and the accompanying template to show how you can display the results. 
+This example assumes you have a Contacts model that has already been imported.

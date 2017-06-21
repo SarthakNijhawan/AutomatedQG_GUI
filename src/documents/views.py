@@ -21,7 +21,7 @@ def home_page(request):
 def home_redirect(request):
     return redirect("docs:home_page")
 
-def download_json_file(request, slug=None):
+def download_json_file(request, slug=None): #TODO
     instance = get_object_or_404(Document, slug=slug)
     filename = instance.json_doc.name
     file_path = os.path.join(settings.MEDIA_ROOT, filename)
@@ -44,24 +44,35 @@ def doc_detail(request, slug=None):
 
     return render(request, "documents/doc_detail.html", context)
 
-def doc_create_file(request):
+def final_processing(instance):
+    # processed -> generated
+    run.run_system(instance)
+    # Create question objects
+    file_handling.create_question_obj(instance)
+    # Generate json
+    file_handling.generate_json_file(instance)
+    # Save process
+    instance.save()
+
+def doc_create_file(request):#TODO
     form = DocumentForm(request.POST or None, request.FILES or None)
 
     if form.is_valid():
         instance = form.save(commit=False)
         instance.file_as_source = True
         instance.save()
-        # unprocessed ->  processed
-        file_handling.unprocessed_to_processed(instance)
-        # processed -> generated
-        run.run_system(instance)
-        # Create question objects
-        file_handling.create_question_obj(instance)
-        # Generate json
-        file_handling.generate_json_file(instance)
-        # Save process
-        instance.save()
-        return HttpResponseRedirect(instance.get_absolute_url())
+
+        if instance.format == ".json" :
+            instances = file_handling.json_processing(instance)
+            instance.delete()
+            for instance in instances :
+                final_processing(instance)
+            return redirect("docs:home_page")
+
+        else :
+            file_handling.unprocessed_to_processed(instance)
+            final_processing(instance)
+            return HttpResponseRedirect(instance.get_absolute_url())
 
     context = {
         "form" : form,
@@ -69,7 +80,7 @@ def doc_create_file(request):
 
     return render(request, "documents/doc_create.html", context)
 
-def doc_create_online(request):
+def doc_create_online(request):#TODO
     form = DocumentOnlineForm(request.POST or None)
 
     if form.is_valid():
@@ -97,12 +108,12 @@ def doc_create_online(request):
     return render(request, "documents/doc_online_create.html", context)
 
 
-def doc_delete(request, slug=None):
+def doc_delete(request, slug=None): #TODO
     instance = get_object_or_404(Document, slug=slug)
     instance.delete()
     return redirect("docs:home_page")
 
-def doc_edit(request, slug=None):
+def doc_edit(request, slug=None): #TODO
     instance = get_object_or_404(Document, slug=slug)
     form = DocumentForm(request.POST or None, request.FILES or None, instance=instance)
 
@@ -127,7 +138,7 @@ def doc_edit(request, slug=None):
 
     return render(request, "documents/doc_create.html", context)
 
-def doc_online_edit(request, slug=None):
+def doc_online_edit(request, slug=None): #TODO
     instance = get_object_or_404(Document, slug=slug)
     form = DocumentOnlineForm(request.POST or None, instance=instance)
 
@@ -156,7 +167,7 @@ def doc_online_edit(request, slug=None):
 
     return render(request, "documents/doc_create.html", context)
 
-def question_create(request, slug1=None):
+def question_create(request, slug1=None): #TODO
     instance_doc = get_object_or_404(Document, slug=slug1)
     form = QuestionForm(request.POST or None)
 
@@ -187,7 +198,7 @@ def question_detail(request, slug1=None, slug2=None):
     }
     return render(request, "questions/question_detail.html", context)
 
-def question_edit(request, slug1=None, slug2=None):
+def question_edit(request, slug1=None, slug2=None): #TODO
     instance = get_object_or_404(Question, slug=slug2)
     form = QuestionForm(request.POST or None, instance=instance)
 

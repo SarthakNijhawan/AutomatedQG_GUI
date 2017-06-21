@@ -6,6 +6,7 @@ from django.template.defaultfilters import slugify
 
 from os.path import join, exists
 from os import remove
+import datetime
 
 MEDIA_ROOT = settings.MEDIA_ROOT
 # Create your models here.
@@ -17,22 +18,22 @@ def upload_location_unprocessed_file(instance, filename):
 
 
 class Document(models.Model):
-    title = models.CharField(max_length=30, blank=False)
+    title = models.CharField(max_length=30, blank=False, default="No-Title")
     timestamp = models.DateField(auto_now=False, auto_now_add=True)
     updated = models.DateField(auto_now=True, auto_now_add=False)
-    slug = models.SlugField(unique=True, blank=True)
-    doc_text = models.TextField(null=True, blank=False)
-    unprocessed_doc = models.FileField(upload_to=upload_location_unprocessed_file, null=True, blank=False)
-    processed_doc = models.FileField(null=True, blank=True)
-    generated_questions_doc = models.FileField(null=True, blank=True)
-    json_doc = models.FileField(null=True, blank=True)
+    slug = models.SlugField(unique=True, blank=True, null=False)
+    content = models.TextField(null=True, blank=False)
+    input_file = models.FileField(upload_to=upload_location_unprocessed_file, null=True, blank=False)
+    processed_file = models.FileField(null=True, blank=True)
+    questions_file = models.FileField(null=True, blank=True)
+    json_out_file = models.FileField(null=True, blank=True)
     docs_extensions = (
-                        (".srt", "Closed Caption File"),
-                        (".txt", "Text File"),
+                        (".json", "Json Format"),
+                        (".txt", "Text Format"),
     )
-    file_extension = models.CharField(max_length=10, null=False, blank=False, choices=docs_extensions, default=".txt")
+    format = models.CharField(max_length=10, null=False, blank=False, choices=docs_extensions, default=".txt")
 
-    file_as_source = models.BooleanField(blank=False, default=True)
+    file_as_input = models.BooleanField(blank=False, default=True)
 
     def __unicode__(self):
         return self.title
@@ -61,8 +62,8 @@ class Document(models.Model):
 
 
 class Question(models.Model):
-    question = models.CharField(max_length=120, blank=False)
-    sentence = models.CharField(null=True, max_length=160, blank=False)
+    question = models.CharField(max_length=120, blank=False, null=False)
+    sentence = models.CharField(null=False, max_length=160, blank=False)
     hint = models.CharField(max_length=50, blank=True, null=True)
     score = models.FloatField(default=3.5)
     acceptable = models.BooleanField(default=False)
@@ -70,18 +71,16 @@ class Question(models.Model):
     option1 = models.CharField(max_length=30)
     option2 = models.CharField(max_length=30)
     option3 = models.CharField(max_length=30)
-    timestamp = models.DateField(auto_now=False, auto_now_add=True)
-    updated = models.DateField(auto_now=True, auto_now_add=False)
     slug = models.SlugField(unique=True)
     document = models.ForeignKey("Document", on_delete=models.CASCADE, null=True)
     edited = models.BooleanField(default=False)
     medium_choices = (
-                        ("Automated", "Automated"),
-                        ("Manually", "Manually")
+                        ("auto", "Automated"),
+                        ("man", "Manual")
     )
-    source = models.CharField(max_length=1, choices=medium_choices, default="Automated", null=True, blank=False)
-    time = models.TimeField(null=True, blank=False, auto_now=False, auto_now_add=False)
-    type_choices = (("mcq", "Multiple Choice"),("reason", "Reasoning"))
+    source = models.CharField(max_length=1, choices=medium_choices, default="auto", null=True, blank=False)
+    time = models.TimeField(null=True, blank=False, auto_now=False, auto_now_add=False, default=datetime.time(00, 00))
+    type_choices = (("mcq", "Multiple Choice"), ("reason", "Reasoning"))
     type = models.CharField(max_length=15, choices=type_choices, default="mcq", null=True, blank=False)
     skippable = models.BooleanField(blank=False, default=True)
 
