@@ -1,5 +1,5 @@
 from django.conf import settings
-from ..models import Question
+from src.documents.models import Question
 import os, json
 
 MEDIA_ROOT = settings.MEDIA_ROOT

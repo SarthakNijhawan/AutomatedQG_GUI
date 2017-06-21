@@ -1,12 +1,13 @@
 import os
+
+from django.conf import settings
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.shortcuts import render, redirect, get_object_or_404
-from django.conf import settings
 
+from src.processing.QuestionGeneration import run
 from .forms import QuestionForm, DocumentForm, DocumentOnlineForm
 from .models import Document, Question
-from .processing import file_handling
-from .processing.QuestionGeneration import run
+from ..processing import file_handling
 
 
 # Create your views here.
